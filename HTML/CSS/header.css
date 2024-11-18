@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+/* 
+
+rgba(22,32,52)
+rgba(30,50,93)
+rgba(59,78,97)
+rgba(135,152,160)
+rgba(198,205,205)
+
+*/
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Nanum Gothic', sans-serif; */
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-width: thin;
+    color: white;
+    border-color: white;
+    text-decoration: none;
+}
+
+body{
+    background-color: rgba(22,32,52);
+    padding-top: 70px;
+}
+
+.nav-bar{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    /* border: solid;
+    border-color: black;
+    border-width: 2px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0; */
+    box-shadow: 0 px 10px rgba(0,0,0,0.5);
+    background-color: rgba(30,50,93);
+    top: 0;
+    height: 70px;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav-logo{
+    float: left;
+    display: flex;
+    font-size: 40px;
+    margin-left: 1vw;
+}
+
+.nav-options{
+    float: right;
+    display: flex;
+    width: 700px;
+    justify-content: space-evenly;
+    margin-right: 1vw;
+}
+
+.nav-options a:hover{
+    text-decoration: underline;
+    color: rgb(223, 223, 223);
+}
+
+.active{
+    text-decoration: underline;
+}
+
+/* Burger */
+#burger , .checkButton{
+    cursor: pointer;
+    display: none;
+}
+
+.burger-icon{
+    right: 0;
+    top: 15px;
+    padding-right: 20px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.burger-icon div{
+    width: 90%;
+    height: 50%;
+    margin: 10% 0 10% 0;
+    padding: 5%;
+    background-color: white;
+}
+
+@media(max-width:768px){
+    .nav-options{
+        position: fixed;
+        width: 100%;
+        top: 70px;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        z-index: 99;
+    }
+
+    .nav-options a{
+        padding: 10px 0 10px 0;
+        background-color : rgb(24, 40, 75);
+    }
+
+    .nav-options a:hover, .active{
+        text-decoration: none;
+    }
+
+    .checkButton{
+        display: block;
+    }
+
+    #burger:checked ~ .nav-options{
+        display: flex;
+    }
+}

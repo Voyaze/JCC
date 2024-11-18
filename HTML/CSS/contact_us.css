@@ -1,0 +1,86 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-us{
+    border: solid;
+    background-color: white;
+    height: 100%;
+    margin-top: 2vw;
+    width: 80vw;
+    max-width: 1300px;
+    padding: 25px 50px 50px 50px;
+}
+
+.contact-us h1{
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.contact-us h2{
+    color: black;
+    text-align: center;
+    font-size: 40px;
+}
+
+.contact-us p{
+    color: black;
+}
+
+.contact-us div{
+    display: flex;
+    padding: 15px 0 0 0;
+}
+
+#contact-form{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.box{
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    height: 50px;
+    border-radius: 5px;
+    color: black;
+    padding-left: 10px;
+
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+#contact-message{
+    padding: 10px;
+    height: 150px;
+}
+
+.contact-us .check{
+    width: 20px;
+    margin-right: 15px;
+}
+
+#form-submit{
+    background-color: black;
+    border: solid;
+    border-width: 2px;
+    border-radius: 40px;
+    width: 200px;
+    align-self: center;
+    padding: 20px 40px 20px 40px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+#form-submit:hover{
+    background-color: white;
+    border-color: black;
+    color:black;
+}
+
+

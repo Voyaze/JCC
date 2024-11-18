@@ -1,0 +1,335 @@
+.middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 0 10vw 10vw 10vw;
+}
+
+.history-title{
+    font-size: 90px;
+    font-weight: 600;
+    margin: 100px 0 25px 0;
+    text-align: center;
+}
+
+.history-container{
+    margin-bottom: 50px;
+    margin-top: 50px;
+    overflow: hidden; 
+    max-width: 2000px;
+}
+
+.history-container input{
+    display: none;
+}
+
+.date-selector{
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 2;
+}
+
+.date-selector label{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    font-weight: 500;
+    background-color: rgba(30,50,93);
+    filter: brightness(0.7);
+    cursor: pointer;
+    font-size: 30px;
+    transition: all 0.15s ease-in-out;
+}
+
+#R1985:hover ~ .date-selector .T1985,
+#R2000:hover ~ .date-selector .T2000,
+#R2010:hover ~ .date-selector .T2010,
+#R2020:hover ~ .date-selector .T2020
+{
+    filter: brightness(0.8);
+    z-index: 2;
+}
+
+#R1985:checked ~ .date-selector .T1985,
+#R2000:checked ~ .date-selector .T2000,
+#R2010:checked ~ .date-selector .T2010,
+#R2020:checked ~ .date-selector .T2020
+{
+    filter: brightness(1);
+    box-shadow: 0 -5px 10px black;
+    z-index: 3;
+    font-weight: bold;
+}
+
+.information-container{
+    padding: 40px;
+    background-color:rgba(30,50,93);
+}
+
+.info-1985, .info-2000, .info-2010, .info-2020{
+    display: none;
+}
+
+.information-container img{
+    display: flex;
+    border-color: black;
+    object-fit: fill;
+    width: 400px;
+    height: 400px;
+}
+
+.information-container p{
+    display: flex;
+    border: solid;
+    padding: 20px;
+    margin-left: 50px;
+    font-size: 1.8em;
+}
+
+#R1985:checked ~ .information-container .info-1985,
+#R2000:checked ~ .information-container .info-2000,
+#R2010:checked ~ .information-container .info-2010,
+#R2020:checked ~ .information-container .info-2020
+{
+    display:flex;
+}
+
+
+.vision-mission{
+    margin-top:   150px;
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+    max-width: 2000px;
+}
+
+.vision-mission h1{
+    font-family: 'Nanum Gothic';
+    border-radius: 50px;
+    margin-top: 20px;
+    padding-top: 10px;
+    font-size: 60px;
+}
+
+.vision-mission p{
+    font-family: 'Nanum Gothic';
+    padding: 20px;
+    font-size: 1.5em;
+    height: 200px;
+}
+
+.vision div, .mission div{
+    height: 2px;
+    width: 200px;
+    background-color: rgb(167, 167, 167);
+}
+
+.vision, .mission{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(59,78,97);   
+    border-radius: 100%;
+    padding: 20px;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+}
+
+.certif{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1500px;
+}
+
+.certif h1{
+    font-size: 90px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.certif img{
+    object-fit: contain;
+    min-height: 450px;
+    height: 40vw;
+    max-height: 750px;
+}
+
+@media (max-width:1538px) {
+    #R1985:checked ~ .information-container .info-1985,
+    #R2000:checked ~ .information-container .info-2000,
+    #R2010:checked ~ .information-container .info-2010,
+    #R2020:checked ~ .information-container .info-2020
+    {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .information-container p{
+        margin: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width:1150px) {
+    .vision-mission{
+        align-items: center;
+        flex-direction: column;
+        margin: 0 0 50px 0;
+    }
+    .vision{
+        margin-bottom: 50px;
+    }
+
+    .information-container p{
+        text-align: center;
+    }
+}
+
+
+@media (max-width:768px) {
+    .history-container{
+        margin-bottom: 0;
+    }
+
+    .history-title{
+        font-size: 70px;
+    }
+    
+    .information-container img{
+        width: 300px;
+        height: 300px;
+    }
+
+    .information-container p{
+        font-size: 1em;
+    }
+    
+    .vision-mission{
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .vision, .mission{
+        width: 300px;
+        height: 300px;
+    }
+
+    .vision-mission h1{
+        font-family: 'Nanum Gothic';
+        border-radius: 50px;
+        margin-top: 20px;
+        font-size: 60px;
+    }
+    
+    .vision-mission p{
+        font-family: 'Nanum Gothic';
+        padding: 20px;
+        font-size: 1em;
+        height: 200px;
+    }
+    
+    .vision div, .mission div{
+        height: 2px;
+        width: 200px;
+        background-color: rgb(167, 167, 167);
+    }
+
+    .certif h1{
+        font-size: 10vw;
+    }
+
+    .certif img{
+        min-height: auto;
+        height: 60vw;
+    }
+}
+
+@media (max-width:765px) {
+    .history-title{
+        font-size: 10vw;
+        margin: 5vw 0 5vw 0;
+    }
+    
+    .history-container{
+        margin: 0;
+        width: 80vw;
+    }
+      
+    .date-selector label{
+        padding: 1vw;
+        font-size: 5vw;
+    }
+    
+    .information-container{
+        padding: 4vw;
+    }
+    
+    .information-container img{
+        height: 50vw;
+        width: 50vw;
+    }
+    
+    .information-container p{
+        padding: 1vw;
+        font-size: 3vw;
+    }
+    
+
+    .vision-mission{
+        margin: 5vw 0 5vw 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 90vw;
+    }
+    
+    .vision-mission h1{
+        margin: 0;
+        padding: 0;
+        font-size: 5vw;
+    }
+    
+    .vision-mission p{
+        margin: 0;
+        padding: 2vw 0 0 0;
+        font-size: 2vw;
+        height: 2vw;
+    }
+    
+    .vision div, .mission div{
+        display: flex;
+        height: 0.5vw;
+        width: 20vw;
+    }
+    
+    .vision, .mission{
+        text-align: center;
+        margin: 0;
+        width: 30vw;
+        height: 30vw;
+    }
+    
+    .certif{
+        max-width: auto;
+    }
+    
+    .certif h1{
+        font-size: 10vw;
+        margin: 5vw 0 5vw 0;
+    }
+    
+    .certif img{
+        min-height: auto;
+
+        max-height: auto;
+    }
+}
